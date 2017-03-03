@@ -1,0 +1,83 @@
+<h1>
+    {{title}}
+</h1>
+<div class='row-fluid'>
+    <form>
+        <div class="form-group">
+            <label class='form-label' for='startDate'>Start Date</label>
+            <wj-input-date #startDateControl id='startDate' class='form-control' [(value)]="startDate"></wj-input-date>
+        </div>
+        <div class="form-group">
+            <label for='endDate'>End Date</label>
+            <wj-input-date #endDateControl class='form-control' id='endDate' [value]="endDate"></wj-input-date>
+        </div>
+    </form>
+</div>
+<wj-flex-grid #grid [allowMerging]="'All'" [itemsSource]="data" [selectionMode]="'Cell'" [frozenRows]="15" [frozenColumns]="1"
+    id='calendar-grid' (initialized)="init(grid,$event)">
+    <wj-flex-grid-column [align]="'Center'" [header]="'Room Number'" [binding]="'roomNumber'" [width]="110">
+        <template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+            <span [attr.data-room-number]="cell.item.roomNumber">{{cell.item.roomNumber}}</span>
+        </template>
+    </wj-flex-grid-column>
+    <template ngFor let-date [ngForOf]="dates" let-i="index">
+        <wj-flex-grid-column [allowMerging]="true" [align]="'center'" [header]="'date'" [width]="dateColumnWidth">
+            <template wjFlexGridCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                {{date}}
+            </template>
+            <template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+                <span class='cellElement {{getBackgroundColor(date, cell.item, "first")}}'
+                    [attr.data-active]="cell.item.bookedDates[date] ? cell.item.bookedDates[date].active : false"
+                    [attr.data-booking-id]="1">
+                    {{getText(date, cell.item, 'first')}}
+                    </span>
+            </template>
+        </wj-flex-grid-column>
+        <wj-flex-grid-column [allowMerging]="true" [align]="'center'" [header]="'date'" [width]="dateColumnWidth">
+            <template wjFlexGridCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                {{date}}
+            </template>
+            <template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+                <span class='cellElement {{getBackgroundColor(date, cell.item, "middle")}}'
+                    [attr.data-active]="cell.item.bookedDates[date] ? cell.item.bookedDates[date].active : false"
+                    [attr.data-booking-id]="1">
+                    {{getText(date, cell.item, 'middle')}}
+                    </span>
+            </template>
+        </wj-flex-grid-column>
+        <wj-flex-grid-column [allowMerging]="true" [align]="'center'" [header]="'date'" [width]="dateColumnWidth">
+            <template wjFlexGridCellTemplate [cellType]="'ColumnHeader'" let-cell="cell">
+                {{date}}
+            </template>
+            <template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+                <span class='cellElement {{getBackgroundColor(date, cell.item, "last")}}'
+                    [attr.data-active]="cell.item.bookedDates[date] ? cell.item.bookedDates[date].active : false"
+                    [attr.data-booking-id]="1"
+                    [attr.data-merge-cells]="cell.item.bookedDates[date].last ? true : false"
+                    [attr.data-duration]="cell.item.bookedDates[date].last ? cell.item.bookedDates[date].booking.duration : false">
+                    {{getText(date, cell.item, 'last')}}
+                    </span>
+            </template>
+        </wj-flex-grid-column>
+    </template>
+    </wj-flex-grid>
+
+
+    <room-modal #roomModal></room-modal>
+
+    <div bsModal #bookingModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title pull-left">Booking modal</h4>
+                    <button type="button" class="close pull-right" aria-label="Close" (click)="hideBookingModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <bookings #bookingGrid></bookings>
+                </div>
+            </div>
+        </div>
+        </div>

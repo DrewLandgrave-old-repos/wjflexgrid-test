@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+ .wj-flexgrid {
+     background-color: white;
+     box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.75);
+     margin-bottom: 12px;
+ }
+
+ body { 
+    padding-top: 70px; 
+    }
+
+.row, .row-fluid{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,4 @@
+filter-row >>> .filterRowRow{
+    margin-bottom: -1px;
+    border-bottom: none;    
+}

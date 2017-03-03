@@ -1,0 +1,13 @@
+<h4>Booking information is randomized now but here is a sample of what you could see</h4>
+<p><strong>Dates: </strong> 2/17/17-2/19/17</p>
+<p><strong>Primary Contact: </strong> Drew Landgrave</p>
+<p><strong>Phone: </strong> 555-555-5555</p>
+<p><strong>Email: </strong> test@test.com</p>
+<p><strong>Additional Contact: </strong> Katie Landgrave</p>
+<p><strong>Additoinal Contact: </strong> Kevin Landgrave</p>
+<p><strong>Notes:</strong></p>
+<wj-flex-grid #bookingFlexGrid [itemsSource]="comments">
+  <wj-flex-grid-column [align]="'center'" [header]="'Date'" [binding]="'date'" [width]="110"></wj-flex-grid-column>
+  <wj-flex-grid-column [align]="'center'" [header]="'Contact'" [binding]="'person'" [width]="110"></wj-flex-grid-column>
+  <wj-flex-grid-column [header]="'Notes'" [binding]="'notes'" [width]="'*'"></wj-flex-grid-column>
+</wj-flex-grid>

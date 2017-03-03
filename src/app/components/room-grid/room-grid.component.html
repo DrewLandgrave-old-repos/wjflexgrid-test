@@ -1,0 +1,17 @@
+ <wj-flex-grid [itemsSource]="data" [selectionMode]="selectionMode"g>
+    <wj-flex-grid-column [align]="'center'" [header]="'Room Number'" [binding]="'roomNumber'" [width]="'*'"></wj-flex-grid-column>
+    <wj-flex-grid-column [align]="'center'" [header]="'Ikea Beds'" [binding]="'ikeaBeds'" [width]="'*'"></wj-flex-grid-column>
+    <wj-flex-grid-column [align]="'center'" [header]="'Z Beds'" [binding]="'zBeds'" [width]="'*'"></wj-flex-grid-column>
+    <wj-flex-grid-column [align]="'center'" [header]="'Max Extra'" [binding]="'maxExtra'" [width]="'*'"></wj-flex-grid-column>
+    <wj-flex-grid-column [align]="'center'" [header]="'Total Occupancy'" [binding]="'totalOccupancy'" [width]="130"></wj-flex-grid-column>
+    <wj-flex-grid-column [align]="'center'" [dataMap]="'tiers'" [header]="'Tier'" [binding]="'tier'" [width]="'*'"></wj-flex-grid-column>
+    <wj-flex-grid-column [align]="'center'" [header]="'Square Feet'" [binding]="'squareFeet'" [width]="'*'"></wj-flex-grid-column>
+    <wj-flex-grid-column [align]="'center'" [cssClass]="'irisReadyColumn'" [name]="'irisReadyColumn'" [header]="'Iris Ready'" [binding]="'irisReady'" [width]="'*'">
+        <template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell" >
+            <div >
+                {{cell.item.irisReady ? 'Yes' : "No"}}
+            </div>
+        </template>
+    </wj-flex-grid-column>
+    <wj-flex-grid-column [align]="'center'" [cssClass]="'cleaningColumn'" [header]="'Cleaning Staff'" [binding]="'cleaningStaff.name'" [width]="'*'"></wj-flex-grid-column>
+ </wj-flex-grid>

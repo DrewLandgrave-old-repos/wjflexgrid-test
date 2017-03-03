@@ -1,0 +1,49 @@
+<!-- Filters -->
+<filter-row></filter-row>
+
+<!-- Master Booking grid -->
+<div class="row-fluid">
+<wj-flex-grid #masterbookingGrid [itemsSource]="bookings">
+    <wj-flex-grid-column [align]="'center'" [header]="'Booking Id'" [binding]="'id'" [width]="'*'"></wj-flex-grid-column>
+    <wj-flex-grid-column [align]="'center'" [header]="'Room Number'" [binding]="'room.roomNumber'" [width]="'*'">
+        <template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell" >
+            <span [attr.data-room-number]="cell.item.room.roomNumber">{{cell.item.room.roomNumber}}</span>
+        </template>
+    </wj-flex-grid-column>
+    <wj-flex-grid-column [align]="'center'" [header]="'Primary Contact'" [binding]="'primaryContact.fullName'" [width]="'*'"></wj-flex-grid-column>
+    <wj-flex-grid-column [align]="'center'" [header]="'Phone Number'" [binding]="'primaryContact.phone'" [width]="'*'"></wj-flex-grid-column>
+    <wj-flex-grid-column [align]="'center'" [header]="'Email'" [binding]="'primaryContact.email'" [width]="'*'"></wj-flex-grid-column>
+</wj-flex-grid>
+</div>
+
+<!-- Pagination -->
+<div class="btn-group">
+<button type="button" class="btn btn-default"
+    (click)="bookings.moveToFirstPage()"
+    [disabled]="bookings.pageIndex <= 0">
+    <span class="glyphicon glyphicon-fast-backward"></span>
+</button>
+<button type="button" class="btn btn-default"
+    (click)="bookings.moveToPreviousPage()"
+    [disabled]="bookings.pageIndex <= 0">
+    <span class="glyphicon glyphicon-step-backward"></span>
+</button>
+<button type="button" class="btn btn-default" disabled style="width:100px">    
+    {{bookings.pageIndex + 1}} / {{bookings.pageCount}}
+</button>
+<button type="button" class="btn btn-default"
+    (click)="bookings.moveToNextPage()"
+    [disabled]="bookings.pageIndex >= bookings.pageCount - 1">
+    <span class="glyphicon glyphicon-step-forward"></span>
+</button>
+<button type="button" class="btn btn-default"
+    (click)="bookings.moveToLastPage()"
+    [disabled]="bookings.pageIndex >= bookings.pageCount - 1">
+<span class="glyphicon glyphicon-fast-forward"></span>
+</button>
+</div>
+<bookings>
+</bookings>
+
+
+<room-modal #roomModal></room-modal>

@@ -1,0 +1,23 @@
+<div class="row-fluid filterRowRow">
+  <div class="btn-group">
+  <wj-menu class="btn bookingFilter" [(value)]="bookingFilter" [header]="'Booking'">
+    <wj-menu-item [value]="'1'">1</wj-menu-item>
+    <wj-menu-item [value]="'2'">2</wj-menu-item>
+    <wj-menu-item [value]="'3'">3</wj-menu-item>
+    <wj-menu-item [value]="'4'">4</wj-menu-item>
+    <wj-menu-item [value]="'5'">5</wj-menu-item>
+    <wj-menu-item [value]="'6'">6</wj-menu-item>
+  </wj-menu>
+  <wj-menu class="btn roomFilter" [(value)]="roomFilter" [header]="'Room Number'">
+    <template ngFor let-room [ngForOf]="rooms" let-i="index">
+      <wj-menu-item [value]="room">{{room}}</wj-menu-item>
+    </template>
+  </wj-menu>
+  <wj-menu class="btn personFilter" [(value)]="personFilter" [header]="'Person'">
+    <template ngFor let-person [ngForOf]="persons" let-i="index">
+      <wj-menu-item [value]="person">{{allPersons[person].firstName}} {{allPersons[person].lastName}}</wj-menu-item>
+    </template>
+  </wj-menu>
+  <button class="btn btn-warning removeButton"><i class="fa fa-remove"></i></button>
+  </div>
+</div>

@@ -1,0 +1,227 @@
+wj-flex-grid >>> .class1{
+background-color: #539513;
+}
+wj-flex-grid >>> .class2{
+background-color: #2045cf;
+}
+wj-flex-grid >>> .class3{
+background-color: #9b3fc8;
+}
+wj-flex-grid >>> .class4{
+background-color: #8f4b8c;
+}
+wj-flex-grid >>> .class5{
+background-color: #b5237a;
+}
+wj-flex-grid >>> .class6{
+background-color: #14c618;
+}
+wj-flex-grid >>> .class7{
+background-color: #3fc1a6;
+}
+wj-flex-grid >>> .class8{
+background-color: #f71085;
+}
+wj-flex-grid >>> .class9{
+background-color: #d17f3f;
+}
+wj-flex-grid >>> .class10{
+background-color: #bc2b0c;
+}
+wj-flex-grid >>> .class11{
+background-color: #60a596;
+}
+wj-flex-grid >>> .class12{
+background-color: #9d92e3;
+}
+wj-flex-grid >>> .class13{
+background-color: #c65199;
+}
+wj-flex-grid >>> .class14{
+background-color: #899fc7;
+}
+wj-flex-grid >>> .class15{
+background-color: #b760e1;
+}
+wj-flex-grid >>> .class16{
+background-color: #41d0a2;
+}
+wj-flex-grid >>> .class17{
+    background-color: #fff0f5;
+}
+wj-flex-grid >>> .class18{
+    background-color: #ffe4c4;
+}
+wj-flex-grid >>> .class19{
+    background-color: #b8b8b8;
+}
+wj-flex-grid >>> .class20{
+    background-color: #8b4c39;
+}
+wj-flex-grid >>> .class21{
+    background-color: #66cd00;
+}
+wj-flex-grid >>> .class22{
+    background-color: #abc987;
+}
+wj-flex-grid >>> .class23{
+    background-color: #a0522d;
+}
+wj-flex-grid >>> .class24{
+    background-color: #20b2aa;
+}
+wj-flex-grid >>> .class25{
+    background-color: #ffa500;
+}
+wj-flex-grid >>> .class26{
+    background-color: #b6b6b6;
+}
+wj-flex-grid >>> .class27{
+    background-color: #a2a2a2;
+}
+wj-flex-grid >>> .class28{
+    background-color: #abbbcb;
+}
+wj-flex-grid >>> .class29{
+    background-color: #54ff9f;
+}
+wj-flex-grid >>> .class30{
+    background-color: #d2b48c;
+}
+wj-flex-grid >>> .class31{
+    background-color: #cd919e;
+}
+wj-flex-grid >>> .class32{
+    background-color: #ffa07a;
+}
+wj-flex-grid >>> .class33{
+    background-color: #d6d6d6;
+}
+wj-flex-grid >>> .class34{
+    background-color: #556b2f;
+}
+wj-flex-grid >>> .class35{
+    background-color: #b23aee;
+}
+wj-flex-grid >>> .class36{
+    background-color: #008b00;
+}
+wj-flex-grid >>> .class37{
+    background-color: #228b22;
+}
+wj-flex-grid >>> .class38{
+    background-color: #8c8c8c;
+}
+wj-flex-grid >>> .class39{
+    background-color: #cdaf95;
+}
+wj-flex-grid >>> .class40{
+    background-color: #ff6eb4;
+}
+wj-flex-grid >>> .class41{
+    background-color: #bebebe;
+}
+wj-flex-grid >>> .class42{
+    background-color: #cd5b45;
+}
+wj-flex-grid >>> .class43{
+    background-color: #cccccc;
+}
+wj-flex-grid >>> .class44{
+    background-color: #d9d9d9;
+}
+wj-flex-grid >>> .class45{
+    background-color: #cdb79e;
+}
+wj-flex-grid >>> .class46{
+    background-color: #8b636c;
+}
+wj-flex-grid >>> .class47{
+    background-color: #cd5c5c;
+}
+wj-flex-grid >>> .class48{
+    background-color: #cdb38b;
+}
+wj-flex-grid >>> .class49{
+    background-color: #768798;
+}
+wj-flex-grid >>> .class50{
+    background-color: #bdb76b;
+}
+wj-flex-grid >>> .class51{
+    background-color: #1874cd;
+}
+wj-flex-grid >>> .class52{
+    background-color: #8b8b8b;
+}
+wj-flex-grid >>> .class53{
+    background-color: #eee9bf;
+}
+wj-flex-grid >>> .class54{
+    background-color: #8b8b7a;
+}
+wj-flex-grid >>> .class55{
+    background-color: #cfcfcf;
+}
+wj-flex-grid >>> .class56{
+    background-color: #ffe4e1;
+}
+wj-flex-grid >>> .class57{
+    background-color: #e0eeee;
+}
+wj-flex-grid >>> .class58{
+    background-color: #cdc9a5;
+}
+wj-flex-grid >>> .class59{
+    background-color: #a8a8a8;
+}
+wj-flex-grid >>> .class60{
+    background-color: #cd6889;
+}
+wj-flex-grid >>> .class61{
+    background-color: #eeb422;
+}
+wj-flex-grid >>> .class62{
+    background-color: #eedc82;
+}
+wj-flex-grid >>> .class63{
+    background-color: #7ccd7c;
+}
+wj-flex-grid >>> .class64{
+    background-color: #626262;
+}
+wj-flex-grid >>> .class65{
+    background-color: #88898a;
+}
+wj-flex-grid >>> .class66{
+    background-color: #cd9b1d;
+}
+wj-flex-grid >>> .class67{
+    background-color: #c4c4c4;
+}
+
+
+wj-flex-grid >>> .wj-cells > .wj-cell{
+    padding: 0;
+}
+
+wj-flex-grid >>> .wj-cells > .wj-cell > div{
+    height: 100%;
+}
+
+wj-flex-grid >>> .cellElement { 
+        width: 100%;
+    height: 100%;
+    display: block;
+    padding-top: 3px;
+}
+
+.form-group{
+        margin-bottom: 15px;
+    width: 11%;
+    display: inline-block;
+}
+
+.form-group .form-control{
+    padding: 0 
+}

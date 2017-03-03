@@ -1,0 +1,8 @@
+.btn-group > .btn{
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0;
+}
+
+.btn-group > .removeButton{
+    padding: 6px;
+}
